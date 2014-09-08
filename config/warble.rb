@@ -1,4 +1,4 @@
-Warbler.framework_detection = false
+#Warbler.framework_detection = false
 
 # Warbler web application assembly configuration file
 Warbler::Config.new do |config|
@@ -7,13 +7,13 @@ Warbler::Config.new do |config|
   # - gemjar: package the gem repository in a jar file in WEB-INF/lib
   # - executable: embed a web server and make the war executable
   # - compiled: compile .rb files to .class files
-  config.features = %w(compiled gemjar)
+  config.features = %w(gemjar)
 
   # Application directories to be included in the webapp.
-  config.dirs = %w(views)
+  config.dirs = %w(views assets)
 
   # Additional files/directories to include, above those in config.dirs
-  config.includes = FileList["my_app"]
+  config.includes = FileList['config.ru', 'myapp.rb']
 
   # Additional files/directories to exclude
   # config.excludes = FileList["lib/tasks/*"]
