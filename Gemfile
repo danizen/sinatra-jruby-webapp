@@ -1,3 +1,5 @@
+source 'http://rubygems.org'
+ruby '2.2.2', :engine => 'jruby', :engine_version => '9.0.3.0'
 gem 'sinatra'
 gem 'warbler'
 gem 'rack'
